@@ -13,8 +13,8 @@ wanted to see how well AI can recommend and diagnose my acne compared to my derm
 
 ## Tech Stack
 
-Backend --> Python and Flask
-AI --> OpenAI API (GPT-4o Vision)
+**Backend** --> Python and Flask
+**AI** --> OpenAI API (GPT-4o Vision)
 Frontend --> HTML, CSS, JavaScript
 Libraries --> Pillow, python-dotenv, Werkzeug, Markdown
 
@@ -24,7 +24,9 @@ Libraries --> Pillow, python-dotenv, Werkzeug, Markdown
 
 2. Install dependencies
 
+```bash
    pip install -r requirements.txt
+```
 
 3. Set up environment variables
 
