@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Acne Analyzer </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+    <div class = "container">
+        <h3>Upload A Photo of Your Face</h3>
+        <p>We'll then analyze the photo and give you skincare recommendations!</p>
+
+        <form method = "post" enctype = "multipart/form-data" action = "/">
+            <input type="file" name = "userimage" accept = "image/*" required>
+            <br>
+            <input type="submit" value = "Submit" id = "submit-btn">
+        </form>
+
+        <img src="#" id = "preview" alt = "preview" style = "display: none;">
+
+        <div id = "spinner" style = "display: none;">
+            <div class = "spinner"></div>
+            <p> Analyzing Image... </p>
+        </div>
+
+        {% if diagnosis %}
+        <div class="result">
+            {{ diagnosis | safe }}
+        </div>
+        {% endif %}
+
+    </div>
+
+<script>
+
+    const fileinput = document.querySelector('input[type = "file"]'); 
+    fileinput.addEventListener('change', () => {
+        const file = fileinput.files[0]; 
+        if (file) {
+            const reader = new FileReader(); 
+            reader.onload = (event) => {
+                const preview = document.getElementById('preview');
+                preview.src = event.target.result; 
+                preview.style.display = 'block'; 
+            }
+            reader.readAsDataURL(file)
+        }
+
+    }); 
+    
+    document.querySelector('form').addEventListener('submit', () => {
+        document.getElementById('submit-btn').style.display = 'none';
+        document.getElementById('spinner').style.display = 'flex';
+    });
+
+</script>
+</body>
+</html>
