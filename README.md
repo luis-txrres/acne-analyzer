@@ -13,10 +13,10 @@ wanted to see how well AI can recommend and diagnose my acne compared to my derm
 
 ## Tech Stack
 
-**Backend** --> Python and Flask
-**AI** --> OpenAI API (GPT-4o Vision)
-Frontend --> HTML, CSS, JavaScript
-Libraries --> Pillow, python-dotenv, Werkzeug, Markdown
+- Backend --> Python and Flask
+- AI --> OpenAI API (GPT-4o Vision)
+- Frontend --> HTML, CSS, JavaScript
+- Libraries --> Pillow, python-dotenv, Werkzeug, Markdown
 
 ## How to Run
 
