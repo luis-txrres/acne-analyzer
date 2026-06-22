@@ -77,11 +77,6 @@ def analyze_acne(filepath):
     return response.choices[0].message.content
 
 
-# @app.route('/')
-# def home():
-#     return 'Hello, this is the home page!'
-
-
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
